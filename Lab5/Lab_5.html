@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title> Лебідь О.В. ЗПІ-зп01, Лаб. 5, Варіант 11 </title>
+      <meta charset="UTF-8" />
+      <meta name="description" content="Lab 5 WEB">
+      <meta name="keywords" content="KPI, WEB, studying">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="author" content="Лебідь Олександр">
+      <meta name="group" content="ЗПІ-зп01">
+      <meta name="labNumber" content="5">
+      <meta name="variant" content="11">
+      <link rel="stylesheet" href="style.css">
+      <script src="script.js"></script>
+  </head>
+  <body>
+    <p>
+        <h2>Лебідь Олександр Вікторович</h2>
+    </p>
+    <p id="firstDynamicElement" onclick="changeColor()">
+        Народився 26 травня 1983 року в місті Христинівка Черкаської області
+    </p>
+    <p id="secondDynamicElement" onclick="changeColorWithQuery()">
+        Освіта:
+        <ul>
+            <li>ЗОШ I-III ступенів №1 м. Христинівки</li>
+            <li>Національний юридичний університет імені Ярослава Мудрого</li>
+        </ul>
+    </p>
+
+    <h4>Хоббі</h4>
+    <ul>
+        <li>читання</li>
+        <li>програмування</li>
+        <li>музика</li>
+        <li>спорт</li>
+    </ul>
+
+    <h4>Улюблені фільми</h4>
+    <ol>
+        <li>Безмежний розум: Області пітьми</li>
+        <li>1+1</li>
+        <li>Метелик</li>
+    </ol>
+
+    <h4>Улюблені письменники</h4>
+    <ol>
+        <li>Аґата Кристі</li>
+        <li>Ернест Хемінгуей</li>
+        <li>Стівен Кінг</li>
+    </ol>
+
+    <p>
+        Львів — місто обласного значення в Україні, адміністративний центр Львівської області, національно-культурний та освітньо-науковий осередок країни, великий промисловий центр і транспортний вузол, вважається столицею Галичини та центром Західної України. За кількістю населення — сьоме місто країни (717 655 станом на 1 грудня 2021 року).
+    Львів заснував король Данило приблизно у 1231—1235 роках (перша згадка від 1256 року). Близько 1272 року місто стало столицею Галицько-Волинського князівства. В добу Середньовіччя Львів був важливим торгівельним центром. За австрійського панування місто стає осередком українського та польського національно-визвольних рухів. Після розпаду 
+    Австро-Угорщини був столицею Західноукраїнської народної республіки. До Другої світової війни належав Польщі, за Пактом Молотова — Ріббентропа анексований Радянським Союзом. З 1991 року Львів перебуває у складі України. Історичний центр Львова занесено до списку Світової спадщини ЮНЕСКО. У 2009 року Львову надано звання Культурної столиці України. 
+    <p>
+        <a href="https://city-adm.lviv.ua">
+            <img src="photo-lviv-ukraine.jpg" width="40%" alt="Зображення Львова">
+        </a>
+    <p>
+        <div>
+            <img id="scalableImage" src="" width="40%" alt="Зображення, що масштабується">
+        </div>
+    <p>
+    <div>
+        <button type="button" name="add_image" onclick="manipulateImage(1)">Додати</button>
+        <button type="button" name="enlarge_image" onclick="manipulateImage(2)">Збільшити</button>
+        <button type="button" name="shrink_image" onclick="manipulateImage(3)">Зменшити</button>
+        <button type="button" name="delete_image" onclick="manipulateImage(4)">Видалити</button>
+    </div>
+  </body>
+</html>
