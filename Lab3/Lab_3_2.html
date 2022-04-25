@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Лебідь О.В. ЗПІ-зп01, Лаб. 3, Варіант 11 </title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Lab 3 WEB">
+    <meta name="keywords" content="KPI, WEB, studying">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Лебідь Олександр">
+    <meta name="group" content="ЗПІ-зп01">
+    <meta name="labNumber" content="3">
+    <meta name="variant" content="11">
+    <style>
+        /* контейнер */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #118f8f;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        /* flex-контейнер */
+        .row {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+            height: 300px;
+        }
+
+        /* загальні налаштування для flex-елементів */
+        .col {
+            position: relative;
+            width: 100%;
+            padding-top: 150px;
+        }
+        .c1{
+            -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+            max-width: 50%;
+            background-color: #4C0794;
+        }
+        .c2{
+            -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+            max-width: 50%;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <header class="container" style="padding-top: 50px; padding-bottom: 50px">
+        Image
+    </header>
+    <main class="container">
+        <div class="row">
+            <div class="col c1">
+                Text
+            </div>
+            <div class="col c2">
+                Text
+            </div>
+        </div>
+    </main>
+    <footer class="container"style="padding-top: 50px; padding-bottom: 50px">
+        Image
+    </footer>
+</body>
+</html>
