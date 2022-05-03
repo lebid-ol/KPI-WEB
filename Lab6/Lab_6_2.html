@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Лебідь О.В. ЗПІ-зп01, Лаб. 6, Варіант 11 </title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Lab 6 WEB">
+    <meta name="keywords" content="KPI, WEB, studying">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Лебідь Олександр">
+    <meta name="group" content="ЗПІ-зп01">
+    <meta name="labNumber" content="6">
+    <meta name="variant" content="11">
+    <style>
+        #color-picker{
+            margin-bottom: 10px;
+            width: 338px;
+            height: 40px;
+        }
+    </style>
+    <script>
+        function changeBgColor(e) {
+            let cellToChange = document.getElementById(this.id);
+            if (e.type === "mouseover"){
+                cellToChange.style.backgroundColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+            }
+            else if (e.type === 'mouseout'){
+                cellToChange.style.backgroundColor = 'white';
+            }
+        }
+        function onMouseClick(e){
+            let cellToChange = document.getElementById(this.id);
+            let colorPicker = document.getElementById("color-picker");
+            if (e.type === 'click'){
+                cellToChange.style.backgroundColor = colorPicker.value;
+            }
+            else if (e.type === 'dblclick'){
+                let cellNumber = Number(cellToChange.id.slice(4));
+                let cellRow = ~~(cellNumber/6)
+                for (let cellColumn = 1; cellColumn < 7; cellColumn++) {
+                    let cellId = "cell" + (6 * cellRow + cellColumn).toString();
+                    let cellToChange = document.getElementById(cellId);
+                    cellToChange.style.backgroundColor = colorPicker.value;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="color" id="color-picker" name="color-picker">
+    <script type="text/javascript">
+        let mainTable = document.createElement('table');
+        let tableRow = document.createElement('tr');
+        let tableCell = document.createElement('td');
+        for (let i = 0; i < 6; i++) {
+            tableRow = document.createElement('tr');
+            for (let j = 1; j < 7; j++){
+                tableCell = document.createElement('td');
+                tableCell.id = 'cell'+(6 * i + j).toString();
+                tableCell.textContent = (6 * i + j).toString();
+                tableCell.style.width = "50px";
+                tableCell.style.height = "50px";
+                tableCell.style.border = "1px solid lightgray";
+                tableCell.addEventListener("mouseover", changeBgColor)
+                tableCell.addEventListener("mouseout", changeBgColor)
+                tableCell.addEventListener("click", onMouseClick)
+                tableCell.addEventListener("dblclick", onMouseClick)
+                tableRow.appendChild(tableCell);
+            }
+            mainTable.appendChild(tableRow);
+            mainTable.style.textAlign = "center";
+            mainTable.style.border = "2px solid black";
+        }
+        document.body.appendChild(mainTable);
+    </script>
+</body>
+</html>
